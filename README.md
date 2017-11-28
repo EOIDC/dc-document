@@ -1,2 +1,2 @@
 # dc-document
-public document of eon dc team
+public document of eoi dc team
