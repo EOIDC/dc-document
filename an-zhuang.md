@@ -6,13 +6,15 @@ Agent的各个不同平台的版本遵循如下命名约定
 
 | 平台 | 包文件名说明 | 示例 |
 | :--- | :--- | :--- |
-| Linux | mave-{版本}-{日期}-Linux.{arch}.GLIBC\_{glibc-version}.tar.gz | mave-5.0.0-171128.Linux.x86\_64.GLIBC\_2.10.tar.gz |
-| AIX | mave-{版本}-{日期}-AIX6.1.tar.gz | mave-5.0.0-171128.AIX6.1.tar.gz |
-| Windows | mave-{版本}-{日期}.windows{版本}.{arch}.tar.gz | mave-5.0.0-171128.windows03.x86\_64.tar.gz |
+| Linux | mave-{版本}-{适用产品或项目}-{日期}-Linux.{arch}.GLIBC\_{glibc-version}.tar.gz | mave-5.0.0-sharplook-171128.Linux.x86\_64.GLIBC\_2.10.tar.gz |
+| AIX | mave-{版本}-{适用产品或项目}-{日期}-AIX6.1.tar.gz | mave-5.0.0-sharplook-171128.AIX6.1.tar.gz |
+| Windows | mave-{版本}-{适用产品或项目}-{日期}.windows{版本}.{arch}.tar.gz | mave-5.0.0-sharplook-171128.windows03.x86\_64.tar.gz |
 
 首先，需要根据不同的平台选择合适软件包。
 
-> windows的版本只有两种windows03和windows08，对应windows server 2003和高于windows server 2008，详见下面对windows版本的安装说明
+> 版本：版本需要配合server的版本号，否则可能会有兼容性问题。windows版本只有两种windows03和windows08，对应windows server 2003和高于windows server 2008，详见下面对windows版本的安装说明。
+>
+> 适用产品或项目：表示这个build的agent用于那个特定的产品或项目，比如sharplook表示夏洛克
 
 ## Windows
 
