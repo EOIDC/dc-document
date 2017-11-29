@@ -10,4 +10,6 @@
   * [故障诊断](gu-zhang-zhen-duan.md)
 * [Release Notes](release-notes.md)
   * [5.0.0](500.md)
+* [开发手册](kai-fa-shou-ce.md)
+  * [C 开发环境搭建](kai-fa-shou-ce/c-kai-fa-huan-jing-da-jian.md)
 
