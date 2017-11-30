@@ -4,7 +4,7 @@
 
 在编译这些 c 程序之前需要先安装 apr，libarchive，pcre，zlib，openssl 等库。
 
-
+其中 apr，libarchive，pcre 是要编译安装的，而 zlib，openssl 只编译不安装。
 
 # 安装 apr
 
@@ -20,8 +20,6 @@ make
 
 make install
 
-
-
 # 安装 libarchive
 
 首先从 192.168.31.142:/root/libarchive-3.2.1.tar.gz 获取源码包。
@@ -35,8 +33,6 @@ cd  libarchive-3.2.1
 make
 
 make install
-
-
 
 # 安装 pcre
 
@@ -52,15 +48,11 @@ make
 
 make install
 
-
-
-
-
 # 安装 zlib
 
 首先从 192.168.31.142:/root/zlib-1.2.11.tar.gz 获取源码包。
 
-tar zxvf zlib-1.2.11.tar.gz
+tar zxvf zlib-1.2.11.tar.gz     //建议解压到 /root/zlib-1.2.11 目录，因为 flow 默认会先到这个目录下寻找 libz 库文件
 
 cd  zlib-1.2.11
 
@@ -68,19 +60,15 @@ cd  zlib-1.2.11
 
 make
 
-
-
 # 安装 openssl
 
 首先从 192.168.31.142:/root/openssl-1.0.2l.tar.gz 获取源码包。
 
-tar zxvf openssl-1.0.2l.tar.gz
+tar zxvf openssl-1.0.2l.tar.gz    //建议解压到 /root/openssl-1.0.2l 目录，flow 默认会先到这个目录下寻找 libcrypto, libssl 库文件
 
 cd  openssl-1.0.2l
 
 ./config
 
 make
-
-
 
