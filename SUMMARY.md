@@ -8,6 +8,7 @@
   * [配置](pei-zhi.md)
   * [升级](sheng-ji.md)
   * [故障诊断](gu-zhang-zhen-duan.md)
+  * [告警集成](gao-jing-ji-cheng.md)
 * [Release Notes](release-notes.md)
   * [5.0.0](500.md)
 * [开发手册](kai-fa-shou-ce.md)
