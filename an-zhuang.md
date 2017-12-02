@@ -52,6 +52,15 @@ windows系统由于event log的api接口不兼容，需要把windows平台细分
 
 根据Unix的平台选择合适的发布包。
 
+### 安装
+
+1. 下载合适的安装包，并解压到合适的目录，假设是`/itoa/app/mave`
+2. 如果要将agent注册到系统开机自启动，可运行`/itoa/app/mave/bin/service-unix.sh`
+
+### 卸载
+
+1. 直接删除解压的目录即可
+
 # Server安装
 
 # Hub安装
