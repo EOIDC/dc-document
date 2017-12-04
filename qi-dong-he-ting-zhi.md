@@ -9,7 +9,7 @@
 
 ## Unix
 
-1. 启动：`$MAVE_HOME\bin\start`。如果想以前台模式启动，使用`$MAVE_HOME\bin\start -f`
+1. 启动：守护模式启动，`$MAVE_HOME\bin\start`。如果想以前台模式启动，使用`$MAVE_HOME\bin\start -f`
 2. 停止：`$MAVE_HOME\bin\stop`。前台模式下，直接`Ctrl+C`即可停止
 
 > start和stop脚本可以在任务当前目录下运行
