@@ -42,7 +42,7 @@ cpu = 0.05
 | default\_proc\_timeout | Option | 5000 | 在进程管理时，对进程设置的超时时间，单位ms。为了防止脚本或命令永远驻留执行，使用这个默认超时时间。不过在接口层面，服务端依然可以设置对进程退出的希望超时时间 |
 | proc\_autorestart\_interval | Option | 60000 | 常驻进程重启时间。当检测到常驻进程异常退出时，经过该参数指定的秒数重启进程 |
 | cgroups\_enable | Option | 0 | （Linux）是否开启cgroups来对进程进行资源限制。这是个全局开关 |
-| cgroups\_hierarchy | Option | /cgroups | （Linux）当系统支持cgroups时，mave会尝试用现有的cgroups文件系统来实现cgroups功能。然而，有时系统没有默认挂载cgroups文件系统，此时需要自动挂载，这个配置项告诉mave将cgroups文件系统挂载在什么目录下 |
+| cgroups\_hierarchy | Option | /cgroup | （Linux）当系统支持cgroups时，mave会尝试用现有的cgroups文件系统来实现cgroups功能。然而，有时系统没有默认挂载cgroups文件系统，此时需要自动挂载，这个配置项告诉mave将cgroups文件系统挂载在什么目录下 |
 | protocol\_retry\_interval | Option | 30000 | 与服务端内部通信时，如果失败，间隔多久重试 |
 | protocol\_timeout | Option | 10000 | 与服务端内部通信时，等待服务端响应的超时时间 |
 | heartbeat\_interval | Option | 60000 | 心跳周期 |
