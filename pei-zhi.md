@@ -6,7 +6,28 @@
 
 mave的配置文件放在$MAVE\_HOME/conf目录下，mave能识别三个配置文件，分别是`default.conf`, `mave.conf`, `local.conf`，mave最终的工作行为由这三个配置文件共同生效。在出现配置冲突的时候，`local.conf`的优先级最高，即local.conf中的配置会覆盖mave.conf和default.conf。`mave.conf`的配置优先级仅次于local.conf，mave.conf通常不需要编辑，因为其中的内容是由服务端下发生成的（首次安装时需要配置一次server地址）。`default.conf`的优先级最低。
 
-mave的配置文件分为三个部分`[core]`配置节、`[general]`配置节和`命名`配置节
+mave的配置文件分为三个部分`[core]`配置节、`[general]`配置节和`命名`配置节。下面是一个样例：
+
+```
+[core]
+loglevel = DEBUG2
+
+[general]
+cmd_channels = mac_go
+watch_procs = ping
+
+[mac_go]
+host = 192.168.31.210
+port = 8899
+main = Y
+
+[ping]
+cmd = /bin/ping
+args = 192.168.31.23
+conf = /etc/eoic.conf
+upstream = mac_go
+cpu = 0.05
+```
 
 ### core
 
@@ -27,8 +48,6 @@ mave的配置文件分为三个部分`[core]`配置节、`[general]`配置节和
 | heartbeat\_interval | Option | 60000 | 心跳周期 |
 | udp\_port | Option | 8190 | mave监听本地的一个udp端口来接收runtime control。详见故障诊断 |
 
-
-
 ### general
 
 `general`节用于配置服务器和进程
@@ -37,8 +56,6 @@ mave的配置文件分为三个部分`[core]`配置节、`[general]`配置节和
 | :--- | :--- | :--- | :--- |
 | cmd\_channels | Require |  | 该参数指定一个网络会话的命名配置。比如如果配置有一个叫cell的网络会话。这里应配置为：cmd\_channels = cell |
 | watch\_procs | Option | None | 配置若干个进程会话的命名配置。详见进程会话 |
-
-
 
 ### 命名配置
 
@@ -54,8 +71,6 @@ mave的配置文件分为三个部分`[core]`配置节、`[general]`配置节和
 | host | Require | None | 服务端主机列表，用逗号分割的主机名或ip地址。对应服务端的多台cell |
 | port | Require | None | 服务端主机所使用的端口，目前仅能配置一个端口。意味着服务端的cell集群的任意节点只能用相同的端口 |
 | main | Require | None | 1或0，表示这个网络会话是否是主会话，此处必须填1。此项将来可能弃用 |
-
-
 
 #### 进程会话
 
