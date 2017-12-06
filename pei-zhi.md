@@ -47,6 +47,7 @@ cpu = 0.05
 | protocol\_timeout | Option | 10000 | 与服务端内部通信时，等待服务端响应的超时时间 |
 | heartbeat\_interval | Option | 60000 | 心跳周期 |
 | udp\_port | Option | 8190 | mave监听本地的一个udp端口来接收runtime control。详见故障诊断 |
+| core\_dump | Option | 1 | （Unix）是否在崩溃是产生core文件。开启该选项有助于对崩溃问题的反馈和分析 |
 
 ### general
 
@@ -70,7 +71,7 @@ cpu = 0.05
 | \[name\] | Require | None | 配置节名称，这个名称用于cmd\_channels |
 | host | Require | None | 服务端主机列表，用逗号分割的主机名或ip地址。对应服务端的多台cell |
 | port | Require | None | 服务端主机所使用的端口，目前仅能配置一个端口。意味着服务端的cell集群的任意节点只能用相同的端口 |
-| main | Require | None | 1或0，表示这个网络会话是否是主会话，此处必须填1。此项将来可能弃用 |
+| is\_main | Require | None | 1或0，表示这个网络会话是否是主会话，此处必须填1。此项将来可能弃用 |
 
 #### 进程会话
 
