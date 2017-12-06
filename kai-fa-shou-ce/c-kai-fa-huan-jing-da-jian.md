@@ -87,6 +87,7 @@ tar -jxf criterion-v2.3.2-linux-x86_64.tar.bz2
 cd criterion-v2.3.2
 cp -r include/criterion /usr/include
 cp lib/* /usr/lib64
+cp lib/* /usr/lib
 sed -i 's|^/prefix=*|/prefix=/usr|g' share/pkgconfig/criterion.pc
 cp share/pkgconfig/criterion.pc /usr/lib64/pkgconfig
 pkg-config --cflags --libs criterion
