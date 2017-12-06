@@ -72,11 +72,11 @@ cd  openssl-1.0.2l
 
 make
 
-
-
 # 安装criterion
 
 criterion是一个单元测试框架，用于测试C和C++代码。
+
+> 注意：下载的编译好的库文件，依赖的是glibc2.14，如果需要在低版本的glibc上运行，需要手动编译。参考[http://criterion.readthedocs.io/en/latest/setup.html\#installation](http://criterion.readthedocs.io/en/latest/setup.html#installation)
 
 首先从[https://github.com/Snaipe/Criterion/releases](https://github.com/Snaipe/Criterion/releases)下载最新的而进程编译包（Linux）。比如[https://github.com/Snaipe/Criterion/releases/download/v2.3.2/criterion-v2.3.2-linux-x86\_64.tar.bz2](https://github.com/Snaipe/Criterion/releases/download/v2.3.2/criterion-v2.3.2-linux-x86_64.tar.bz2)。
 
