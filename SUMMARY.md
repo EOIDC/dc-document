@@ -11,6 +11,7 @@
   * [告警集成](yong-hu-shou-ce/gao-jing-ji-cheng.md)
 * [自健康用户手册](zi-jian-kang.md)
   * [路由](zi-jian-kang/lu-you.md)  
+  * [Kafka](zi-jian-kang/kafka.md) 
 * [Release Notes](release-notes.md)
   * [5.0.0](release-notes/500.md)
 * [开发手册](kai-fa-shou-ce.md)

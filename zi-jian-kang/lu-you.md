@@ -3,6 +3,7 @@ router模块用于监控router系统的指标，
 主要包括router系统的tps，未完成量，及处理量等。
 （router是一个将agent采集的数据中转至数据处理系统的服务端系统）。
 
+
 ###配置文件
 ```
 - module: router
@@ -47,6 +48,7 @@ router模块用于监控router系统的指标，
   }
 }
 ```
+
 
 ###指标含义
 | 指标                              | 含义                        |
