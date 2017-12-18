@@ -12,6 +12,7 @@
 * [自健康用户手册](zi-jian-kang.md)
   * [路由](zi-jian-kang/lu-you.md)  
   * [Kafka](zi-jian-kang/kafka.md) 
+  * [Zookeeper](zi-jian-kang/zookeeper.md) 
 * [Release Notes](release-notes.md)
   * [5.0.0](release-notes/500.md)
 * [开发手册](kai-fa-shou-ce.md)

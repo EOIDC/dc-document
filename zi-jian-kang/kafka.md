@@ -3,7 +3,7 @@ kafka模块用于监控kafka的指标，
 主要包括生产tps，消费tps，topic的offset信息等。
 
 
-###配置文件
+###1. 配置文件
 ```
 - module: kafka
   metricsets: ["partition","consumergroup"]
@@ -20,8 +20,8 @@ kafka模块用于监控kafka的指标，
 - `groups` groups过滤数组，如果被设置，那么直采集数组内的group；如果未设置，则采集所有group
 
 
-###指标数据样例
-####生产者角度
+###2. 指标数据样例
+####2.1 生产者角度
 ```
 {
     "@timestamp":"2017-12-18T07:49:00.920Z",
@@ -49,7 +49,7 @@ kafka模块用于监控kafka的指标，
         }
 }
 ```
-####消费者角度
+####2.2 消费者角度
 ```
 {
     "@timestamp":"2017-12-18T07:49:00.920Z",
@@ -61,8 +61,8 @@ kafka模块用于监控kafka的指标，
             },
             "meta":"",
             "client":{
-                "host":"consumer-1",
-                "member_id":"172.16.128.198",
+                "host":"172.16.128.198",
+                "member_id":"consumer-1-30763f0a-0f92-488e-a47d-8075329d3cfc",
                 "id":"consumer-1"
             },
             "topic":"wangdi-mb-test",
@@ -78,8 +78,8 @@ kafka模块用于监控kafka的指标，
 ```
 
 
-###指标含义
-####生产者角度
+###3. 指标含义
+####3.1 生产者角度
 | 指标 | 含义 |
 | :---| :--- |
 | @timestamp | 时间戳 |
@@ -92,7 +92,7 @@ kafka模块用于监控kafka的指标，
 | kafka.partition.partition.leader | partition的leader broker id |
 | kafka.partition.broker.id | broker的id |
 | kafka.partition.broker.address | broker的hostname |
-####消费者角度
+####3.2 消费者角度
 | 指标 | 含义 |
 | :---| :--- |
 | @timestamp | 时间戳 |
