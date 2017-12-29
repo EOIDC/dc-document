@@ -92,17 +92,8 @@ cpu = 0.05
 | cpu | Option | None | （Linux）希望控制进程的cpu占用率的配置，只在linux的cgroups\_enable的情况下才生效。浮点值，比如0.05表示5% |
 | memory | Option | None | （Linux）希望控制进程的memory占用率的配置，只在linux的cgroups \_enable的情况下才生效。单位MB。 |
 
-# Server配置
 
-## 配置cell
 
-## 配置router
-
-# Hub配置
-
-## 配置hub
-
-## 配置KC
 
 
 
