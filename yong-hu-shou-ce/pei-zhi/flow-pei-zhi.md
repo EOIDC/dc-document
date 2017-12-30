@@ -96,5 +96,33 @@ Port 15044
 
 ### om_lumberjack
 
+### im_file_ext
 
+配置项
+
+| 名称                 | 是否必填    | 默认值   | 说明                                       |
+| :----------------- | :------ | :---- | :--------------------------------------- |
+| File               | Require |       | 文件名或含有通配符的文件路径                           |
+| BlackList          | Option  |       | 黑名单过滤列表，逗号间隔。如"\*/1/11/\*","\*/1/Memorizethepassedtime.log","\*/2/21/\*.txt","\*/2/mood.txt" |
+| WhiteList          | Option  |       | 白名单过滤列表，类似BlackList                      |
+| SavePos            | Option  | TRUE  | 是否保存采集点位置                                |
+| Recursive          | Option  | TRUE  | 是否递归遍历File指定的目录                          |
+| RenameCheck        | Option  | FALSE | 是否开启，重命名检测                               |
+| ReadFromLast       | Option  | TRUE  | 首次采集时，是否只从最后开始采集                         |
+| IgnoreOlderThan    | Option  | 0     | 忽略mtime早于当前多久的文件。默认不忽略。这里配置秒数，如3600表示1小时前 |
+| IgnoreSymlink      | Option  | TRUE  | 是否忽略link                                 |
+| ActionWhenEof      | Option  | NONE  | 当读到文件尾时作何特殊处理，DELETE, RENAME, NONE       |
+| ActionMinWait      | Option  | 10    | 当读到文件尾时，多长时间执行ActionWhenEof的设置，默认10s     |
+| FlushPartial       | Option  | 10    | 对于文件末尾没有成行的记录，最多等待多长时间就发送出来，默认10s        |
+| BackOff            | Option  | 1     | 针对已读完的文件，将文件的check时间延后，起始默认1s            |
+| MaxBackOff         | Option  | 60    | 最大时间延后时间，默认60s                           |
+| BackoffFactor      | Option  | 2     | BackOff增长率                               |
+| FlushCacheInterval | Option  | 60    | 自动刷新缓存的时间间隔，默认60s                        |
+| PollInterval       | Option  | 1     | 对已经打开的文件，check是否有新数据的时间间隔，默认1s           |
+| DirCheckInterval   | Option  | 2     | 检查目录中的新文件和文件变化的周期，默认2s                   |
+| ActiveFiles        | Option  | 10    | 同时打开的文件数量                                |
+| Enable             | Option  | TRUE  | 是否启用                                     |
+| HashEnable         | Option  | TRUE  | 是否对消息进行hash标识                            |
+| HashDataLength     | Option  | 256   | 用文件内容的前多少个字节参与hash计算                     |
+| HashWaitData       | Option  | FALSE | 当文件内容不足256字节时是否直到256字节才读取                |
 
